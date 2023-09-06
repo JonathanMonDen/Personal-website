@@ -8,13 +8,14 @@ import {
   FaReact,
   FaWordpress,
   FaFigma,
+  FaSass,
+  FaBootstrap,
 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiTailwindcss,
 } from "react-icons/si";
 
 //  data
@@ -23,33 +24,20 @@ const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
-        icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
-        ],
+        title: "HTML",
+        icons: [<FaHtml5 />, <FaWordpress />],
       },
       {
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-    ],
-  },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "CSS",
+        icons: [<FaCss3 />, <FaSass />, <FaBootstrap />, <SiTailwindcss />],
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "JS",
+        icons: [<FaJs />, <FaReact />, <SiNextdotjs />, <SiFramer />],
+      },
+      {
+        title: "MISC.",
+        icons: [<FaFigma />, ],
       },
     ],
   },
@@ -57,16 +45,12 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Adag Payroll Services",
+        stage: "July 2023 - October 2023",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Keytrends",
+        stage: "January 2023 - June 2023",
       },
     ],
   },
@@ -101,8 +85,8 @@ const About = () => {
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
       <motion.div
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
-        variants={fadeIn("right", 0.5)}
+        className="hidden xl:flex absolute bottom-0 -left-[180px]"
+        variants={fadeIn("right", 0.3)}
         initial="hidden"
         animate="show"
         exit="hidden"
@@ -110,8 +94,17 @@ const About = () => {
         <Avatar />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div>text</div>
-        <div>
+        <div className="flex-1 flex flex-col justify-center">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl p-4 m-6">
+            Perfection is not attainable, but if we chase perfection we can
+            catch <span className="text-accent font-semibold">excellence</span>
+          </h2>
+          <p className="text-lg md:text-xl xl:text-2xl px-4 mx-6">
+            Passionate junior Front-end developer eager to explore new horizons
+          </p>
+        </div>
+
+        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
@@ -124,6 +117,29 @@ const About = () => {
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+            {aboutData[index].info.map((item, itemIndex) => {
+              return (
+                <div
+                  key={itemIndex}
+                  className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                >
+                  <div>{item.title}</div>
+
+                  <div className="hidden md:flex">-</div>
+
+                  <div>{item.stage}</div>
+
+                  <div className="flex gap-x-4">
+                    {item.icons?.map((icon, itemIndex) => {
+                      return <div className="text-3xl text-white">{icon}</div>;
+                    })}
+                  </div>
                 </div>
               );
             })}
