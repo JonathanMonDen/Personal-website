@@ -12,11 +12,7 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiTailwindcss,
-} from "react-icons/si";
+import { SiNextdotjs, SiFramer, SiTailwindcss } from "react-icons/si";
 
 //  data
 const aboutData = [
@@ -37,7 +33,7 @@ const aboutData = [
       },
       {
         title: "MISC.",
-        icons: [<FaFigma />, ],
+        icons: [<FaFigma />],
       },
     ],
   },
@@ -58,16 +54,8 @@ const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Web Development - IES El Rincon",
+        stage: "2022",
       },
     ],
   },
@@ -94,17 +82,29 @@ const About = () => {
         <Avatar />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div className="flex-1 flex flex-col justify-center">
-          <h2 className="text-2xl md:text-3xl xl:text-5xl p-4 m-6">
-            Perfection is not attainable, but if we chase perfection we can
-            catch <span className="text-accent font-semibold">excellence</span>
+        <motion.div
+          className="flex-1 flex flex-col justify-center"
+          variants={fadeIn("right", 0.3)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+        >
+          <h2 className="text-3xl md:text-4xl xl:text-5xl p-4 m-6">
+            Chasing perfection
+            Catching <span className="text-accent font-semibold">excellence</span>
           </h2>
           <p className="text-lg md:text-xl xl:text-2xl px-4 mx-6">
             Passionate junior Front-end developer eager to explore new horizons
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <motion.div
+          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+        >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
@@ -144,7 +144,7 @@ const About = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

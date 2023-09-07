@@ -1,7 +1,5 @@
 import {} from "react-icons/rx";
 
-export const serviceData = [];
-
 import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
@@ -20,12 +18,12 @@ const Services = () => {
         initial="initial"
         animate="animate"
         exit="hidden">
-              My services <span className="text-accent">.</span>
+              <span className="text-accent">{'<'}</span> My Services <span className="text-accent">{'>'}</span>
             </motion.h2>
             <motion.p className="mb-4 max-w-[400px] mx-auto lg:mx-0" variants={fadeIn('left',0.6)}
         initial="initial"
         animate="animate"
-        exit="hidden">Lorem ipsum</motion.p>
+        exit="hidden"><span className="text-accent">{'<'}</span> A collection of the things I can do <span className="text-accent">{'/>'}</span></motion.p>
           </div>
           <motion.div className="w-full xl:max-w-[65%]" variants={fadeIn('up',0.6)}
         initial="initial"

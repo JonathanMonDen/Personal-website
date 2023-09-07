@@ -13,27 +13,27 @@ const serviceData = [
   {
     icon: <RxCrop />,
     title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Define and identify your company.",
   },
   {
     icon: <RxPencil2 />,
     title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "From mock-up to full website.",
   },
   {
     icon: <RxDesktop />,
     title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Bring your ideas to live.",
   },
   {
     icon: <RxReader />,
     title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Effective and quick.",
   },
   {
     icon: <RxRocket />,
     title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Impulse your company to the top.",
   },
 ];
 
@@ -57,8 +57,8 @@ const ServiceSlider = () => {
           spaceBetweeen: 15,
         },
       }}
-      FreeMode={true}
-      Pagination={{ clickable: true }}
+      freeMode={true}
+      pagination={{ clickable: true }}
       modules={[FreeMode, Pagination]}
       className="h-[240px] sm:h-[340px]"
     >
@@ -66,17 +66,19 @@ const ServiceSlider = () => {
         return (
           <SwiperSlide key={itemIndex}>
             <div
-              className="h-max bg-[rgba(65,47,123,0.15)] rounded-lg px-6 py-8
-                  flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer mx-2 hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+              className="h-max min-h-[150px] sm:min-h-[250px] bg-[rgba(65,47,123,0.15)] rounded-lg px-6 py-8
+                  flex justify-evenly sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer mx-2 hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
             >
               <div className="text-accent text-3xl mb-4">{item.icon}</div>
               <div>
                 <div className="mb-2 text-lg">{item.title}</div>
-                <div className="leading-normal max-w-[350px]">{item.description}</div>
+                <div className="leading-normal max-w-[350px]">
+                  {item.description}
+                </div>
               </div>
 
               <div className="text-3xl">
-                <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent  transition-all duration-300"/>
+                <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent  transition-all duration-300" />
               </div>
             </div>
           </SwiperSlide>
