@@ -14,26 +14,27 @@ const Home = () => {
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center h-full xl:pt-40 xl:text-left container mx-auto">
           <motion.h1
-            className="h1"
+            className="h1 tracking-tight font-light"
             variants={fadeIn("down", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
           >
-            Transforming ideas <br /> Into{" "}
-            <span className="text-accent"> Digital Reality</span>
+            
+            <span className="text-accent">{'</'}</span>Jonathan MD
+            <span className="text-accent">{'>'}</span>
           </motion.h1>
           <motion.p
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm mx-auto xl:mx-0 mb-10 xl:mb-16"
             variants={fadeIn("down", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
             transition={{ delay: 0.2, duration: 0.4, ease: "easeInOut" }}
           >
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-            Lorem ipsum Lorem ipsum Lorem ipsum
+            <span className="text-accent">{'<'}</span>
+            Perfection is not attainable but if we chase perfection we can catch excellence
+            <span className="text-accent">{'>'}</span>
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
@@ -50,7 +51,7 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
+      <div className="w-full h-full absolute right-0 bottom-0">
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
         <div>
           <ParticlesContainer />

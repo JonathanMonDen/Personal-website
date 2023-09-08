@@ -12,7 +12,7 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 
-import { SiNextdotjs, SiFramer, SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs, SiFramer, SiTailwindcss, SiTypescript, SiDart, SiFlutter } from "react-icons/si";
 
 //  data
 const aboutData = [
@@ -29,11 +29,11 @@ const aboutData = [
       },
       {
         title: "JS",
-        icons: [<FaJs />, <FaReact />, <SiNextdotjs />, <SiFramer />],
+        icons: [<FaJs />, <FaReact />, <SiNextdotjs />, <SiFramer />, <SiTypescript />],
       },
       {
         title: "MISC.",
-        icons: [<FaFigma />],
+        icons: [<FaFigma />, <SiDart />, <SiFlutter />],
       },
     ],
   },
@@ -129,7 +129,7 @@ const About = () => {
                   key={itemIndex}
                   className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
-                  <div>{item.title}</div>
+                  <div><span className="text-accent">{'['}</span>{item.title}<span className="text-accent">{']'}</span></div>
 
                   <div className="hidden md:flex">-</div>
 

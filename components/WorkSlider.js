@@ -5,19 +5,19 @@ const workSlides = {
       images: [
         {
           title: "title",
-          path: "/thumb1.jpg",
+          path: "/placeholder.jpg",
         },
         {
           title: "title",
-          path: "/thumb2.jpg",
+          path: "/placeholder.jpg",
         },
         {
           title: "title",
-          path: "/thumb3.jpg",
+          path: "/placeholder.jpg",
         },
         {
           title: "title",
-          path: "/thumb4.jpg",
+          path: "/placeholder.jpg",
         },
       ],
     },
@@ -25,19 +25,19 @@ const workSlides = {
       images: [
         {
           title: "title",
-          path: "/thumb4.jpg",
+          path: "/placeholder.jpg",
         },
         {
           title: "title",
-          path: "/thumb1.jpg",
+          path: "/placeholder.jpg",
         },
         {
           title: "title",
-          path: "/thumb2.jpg",
+          path: "/placeholder.jpg",
         },
         {
           title: "title",
-          path: "/thumb3.jpg",
+          path: "/placeholder.jpg",
         },
       ],
     },
@@ -77,7 +77,7 @@ const WorkSlider = () => {
                       <Image
                         src={image.path}
                         width={500}
-                        height={300}
+                        height={500}
                         alt={`work slide number: ${index + 1}`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-pink-500 to-purple-500 opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
