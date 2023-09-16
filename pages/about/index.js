@@ -21,19 +21,29 @@ const aboutData = [
     info: [
       {
         title: "HTML",
-        icons: [<FaHtml5 />, <FaWordpress />],
+        icons: [<FaHtml5 key="html-icon" />, <FaWordpress key="wordpress-icon" />],
       },
       {
         title: "CSS",
-        icons: [<FaCss3 />, <FaSass />, <FaBootstrap />, <SiTailwindcss />],
+        icons: [
+          <FaCss3 key="css-icon" />,
+          <FaSass key="sass-icon" />,
+          <FaBootstrap key="bootstrap-icon" />,
+          <SiTailwindcss key="tailwindcss-icon" />,
+        ],
       },
       {
         title: "JS",
-        icons: [<FaJs />, <FaReact />, <SiNextdotjs />, <SiFramer />],
+        icons: [
+          <FaJs key="js-icon" />,
+          <FaReact key="react-icon" />,
+          <SiNextdotjs key="nextjs-icon" />,
+          <SiFramer key="framer-icon" />,
+        ],
       },
       {
         title: "MISC.",
-        icons: [<FaFigma />],
+        icons: [<FaFigma key="figma-icon" />],
       },
     ],
   },
@@ -90,8 +100,8 @@ const About = () => {
           exit="hidden"
         >
           <h2 className="text-3xl md:text-4xl xl:text-5xl p-4 m-6">
-            Chasing perfection
-            Catching <span className="text-accent font-semibold">excellence</span>
+            Chasing perfection Catching{" "}
+            <span className="text-accent font-semibold">excellence</span>
           </h2>
           <p className="text-lg md:text-xl xl:text-2xl px-4 mx-6">
             Passionate junior Front-end developer eager to explore new horizons
@@ -109,7 +119,7 @@ const About = () => {
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
-                  key={itemIndex}
+                  key={`item-${itemIndex}`}
                   className={`${
                     index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
@@ -126,7 +136,7 @@ const About = () => {
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
-                  key={itemIndex}
+                  key={`info-${itemIndex}`}
                   className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   <div>{item.title}</div>
@@ -137,7 +147,14 @@ const About = () => {
 
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-3xl text-white">{icon}</div>;
+                      return (
+                        <div
+                          className="text-3xl text-white"
+                          key={`icon-${itemIndex}`}
+                        >
+                          {icon}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
