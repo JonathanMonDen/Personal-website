@@ -21,19 +21,29 @@ const aboutData = [
     info: [
       {
         title: "HTML",
-        icons: [<FaHtml5 />, <FaWordpress />],
+        icons: [<FaHtml5 key="html-icon" />, <FaWordpress key="wordpress-icon" />],
       },
       {
         title: "CSS",
-        icons: [<FaCss3 />, <FaSass />, <FaBootstrap />, <SiTailwindcss />],
+        icons: [
+          <FaCss3 key="css-icon" />,
+          <FaSass key="sass-icon" />,
+          <FaBootstrap key="bootstrap-icon" />,
+          <SiTailwindcss key="tailwindcss-icon" />,
+        ],
       },
       {
         title: "JS",
-        icons: [<FaJs />, <FaReact />, <SiNextdotjs />, <SiFramer />, <SiTypescript />],
+        icons: [
+          <FaJs key="js-icon" />,
+          <FaReact key="react-icon" />,
+          <SiNextdotjs key="nextjs-icon" />,
+          <SiFramer key="framer-icon" />,
+        ],
       },
       {
         title: "MISC.",
-        icons: [<FaFigma />, <SiDart />, <SiFlutter />],
+        icons: [<FaFigma key="figma-icon" />],
       },
     ],
   },
@@ -41,11 +51,11 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Adag Payroll Services",
+        title: "Adag Payroll Services - App developer",
         stage: "July 2023 - October 2023",
       },
       {
-        title: "Keytrends",
+        title: "Keytrends - Frontend feveloper",
         stage: "January 2023 - June 2023",
       },
     ],
@@ -55,7 +65,7 @@ const aboutData = [
     info: [
       {
         title: "Web Development - IES El Rincon",
-        stage: "2022",
+        stage: "2021-2023",
       },
     ],
   },
@@ -90,8 +100,8 @@ const About = () => {
           exit="hidden"
         >
           <h2 className="text-3xl md:text-4xl xl:text-5xl p-4 m-6">
-            Chasing perfection
-            Catching <span className="text-accent font-semibold">excellence</span>
+            Chasing perfection Catching{" "}
+            <span className="text-accent font-semibold">excellence</span>
           </h2>
           <p className="text-lg md:text-xl xl:text-2xl px-4 mx-6">
             Passionate junior Front-end developer eager to explore new horizons
@@ -137,7 +147,7 @@ const About = () => {
 
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-3xl text-white">{icon}</div>;
+                      return <div className="text-3xl text-white" key={itemIndex}>{icon}</div>;
                     })}
                   </div>
                 </div>
