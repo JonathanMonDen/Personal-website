@@ -12,7 +12,7 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 
-import { SiNextdotjs, SiFramer, SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs, SiFramer, SiTailwindcss, SiTypescript, SiDart, SiFlutter } from "react-icons/si";
 
 //  data
 const aboutData = [
@@ -51,11 +51,11 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Adag Payroll Services",
+        title: "Adag Payroll Services - App developer",
         stage: "July 2023 - October 2023",
       },
       {
-        title: "Keytrends",
+        title: "Keytrends - Frontend feveloper",
         stage: "January 2023 - June 2023",
       },
     ],
@@ -65,7 +65,7 @@ const aboutData = [
     info: [
       {
         title: "Web Development - IES El Rincon",
-        stage: "2022",
+        stage: "2021-2023",
       },
     ],
   },
@@ -139,7 +139,7 @@ const About = () => {
                   key={`info-${itemIndex}`}
                   className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
-                  <div>{item.title}</div>
+                  <div><span className="text-accent">{'['}</span>{item.title}<span className="text-accent">{']'}</span></div>
 
                   <div className="hidden md:flex">-</div>
 
@@ -147,14 +147,7 @@ const About = () => {
 
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
-                      return (
-                        <div
-                          className="text-3xl text-white"
-                          key={`icon-${itemIndex}`}
-                        >
-                          {icon}
-                        </div>
-                      );
+                      return <div className="text-3xl text-white" key={itemIndex}>{icon}</div>;
                     })}
                   </div>
                 </div>
