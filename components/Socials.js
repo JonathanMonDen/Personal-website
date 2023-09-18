@@ -7,7 +7,10 @@ const Socials = () => {
     <Link href={'https://github.com/JonathanMonDen'} target="_blank" className="hover:text-accent transition-all duration-300">
       <RiGithubFill />
     </Link>
-    <Link href={'https://www.linkedin.com/in/jonathan-monagas-d%C3%A9niz-073105229/'} target="_blank" className="hover:text-accent transition-all duration-300">
+    <Link href={'https://codepen.io/JonathanMonDen'} target="_blank" className="hover:text-accent transition-all duration-300">
+      <RiCodepenFill />
+    </Link>
+    <Link href={'https://www.linkedin.com/in/jmddev/'} target="_blank" className="hover:text-accent transition-all duration-300">
       <RiLinkedinFill />
     </Link>
   </div>;

@@ -12,7 +12,14 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 
-import { SiNextdotjs, SiFramer, SiTailwindcss, SiTypescript, SiDart, SiFlutter } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiFramer,
+  SiTailwindcss,
+  SiTypescript,
+  SiDart,
+  SiFlutter,
+} from "react-icons/si";
 
 //  data
 const aboutData = [
@@ -21,7 +28,10 @@ const aboutData = [
     info: [
       {
         title: "HTML",
-        icons: [<FaHtml5 key="html-icon" />, <FaWordpress key="wordpress-icon" />],
+        icons: [
+          <FaHtml5 key="html-icon" />,
+          <FaWordpress key="wordpress-icon" />,
+        ],
       },
       {
         title: "CSS",
@@ -36,6 +46,7 @@ const aboutData = [
         title: "JS",
         icons: [
           <FaJs key="js-icon" />,
+          <SiTypescript key="ts-icon" />,
           <FaReact key="react-icon" />,
           <SiNextdotjs key="nextjs-icon" />,
           <SiFramer key="framer-icon" />,
@@ -43,7 +54,11 @@ const aboutData = [
       },
       {
         title: "MISC.",
-        icons: [<FaFigma key="figma-icon" />],
+        icons: [
+          <FaFigma key="figma-icon" />,
+          <SiDart key="dart-icon" />,
+          <SiFlutter key="flutter-icon" />,
+        ],
       },
     ],
   },
@@ -80,14 +95,14 @@ import { fadeIn } from "../../variants";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary py-32 text-center xl:text-left">
       <Circles />
       <motion.div
-        className="hidden xl:flex absolute bottom-0 -left-[180px]"
-        variants={fadeIn("right", 0.3)}
+        variants={fadeIn("right", 0.5)}
         initial="hidden"
         animate="show"
         exit="hidden"
+        className="hidden xl:flex absolute bottom-0 -left-[160px] w-full h-[75%]"
       >
         <Avatar />
       </motion.div>
@@ -139,7 +154,11 @@ const About = () => {
                   key={`info-${itemIndex}`}
                   className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
-                  <div><span className="text-accent">{'['}</span>{item.title}<span className="text-accent">{']'}</span></div>
+                  <div>
+                    <span className="text-accent">{"["}</span>
+                    {item.title}
+                    <span className="text-accent">{"]"}</span>
+                  </div>
 
                   <div className="hidden md:flex">-</div>
 
@@ -147,7 +166,11 @@ const About = () => {
 
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-3xl text-white" key={itemIndex}>{icon}</div>;
+                      return (
+                        <div className="text-3xl text-white" key={itemIndex}>
+                          {icon}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>

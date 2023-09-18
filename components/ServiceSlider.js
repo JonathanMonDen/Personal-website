@@ -57,6 +57,7 @@ const ServiceSlider = () => {
           spaceBetweeen: 15,
         },
       }}
+      centeredSlides={true}
       freeMode={true}
       pagination={{ clickable: true }}
       modules={[FreeMode, Pagination]}
@@ -66,10 +67,10 @@ const ServiceSlider = () => {
         return (
           <SwiperSlide key={itemIndex}>
             <div
-              className="h-max min-h-[150px] sm:min-h-[250px] bg-[rgba(65,47,123,0.15)] rounded-lg px-6 py-8
-                  flex justify-evenly sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer mx-2 hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300"
+              className="h-max min-h-[150px] sm:min-h-[250px] bg-primary/40 rounded-lg px-6 py-8
+                  flex justify-evenly sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer mx-2 hover:bg-secondary/40 transition-all duration-300"
             >
-              <div className="text-accent text-3xl mb-4">{item.icon}</div>
+              <div className="text-3xl mb-4">{item.icon}</div>
               <div>
                 <div className="mb-2 text-lg">{item.title}</div>
                 <div className="leading-normal max-w-[350px]">

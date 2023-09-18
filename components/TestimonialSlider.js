@@ -5,21 +5,21 @@ const testimonialData = [
     name: "Anne Smith",
     position: "Customer",
     message:
-      "Extremely proficient and a quick learner!",
+      "His attention to detail and dedication to excellence is truly unmatched.",
   },
   {
     image: "/t-avt-2.png",
     name: "Jane Doe",
     position: "Customer",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Working with Jonathan was an absolute pleasure, a senior developer in the making.",
   },
   {
     image: "/t-avt-3.png",
     name: "Jhon Doe",
     position: "Customer",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "From start to finish, he demonstrated a remarkable level of expertise and dedication.",
   },
 ];
 

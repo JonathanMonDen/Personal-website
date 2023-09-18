@@ -8,6 +8,7 @@ const Circles = () => {
         width={300}
         height={300}
         className="w-full h-full"
+        alt="circles"
       />
     </div>
   );

@@ -10,8 +10,8 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+    <div className="bg-primary h-full">
+      <div className="w-full h-full bg-gradient-to-r from-secondary/10 via-black/30 to-secondary/10">
         <div className="text-center flex flex-col justify-center h-full xl:pt-40 xl:text-left container mx-auto">
           <motion.h1
             className="h1 tracking-tight font-light"
