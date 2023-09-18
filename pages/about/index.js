@@ -119,7 +119,7 @@ const About = () => {
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
-                  key={itemIndex}
+                  key={`item-${itemIndex}`}
                   className={`${
                     index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
@@ -136,7 +136,7 @@ const About = () => {
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
-                  key={itemIndex}
+                  key={`info-${itemIndex}`}
                   className="flex flex-1 flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   <div><span className="text-accent">{'['}</span>{item.title}<span className="text-accent">{']'}</span></div>
